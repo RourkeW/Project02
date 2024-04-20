@@ -27,7 +27,6 @@ body {
 .game-area {
     height: 650px;
     width: 1000px;
-    border: 1px solid red;
     display: grid;
     grid-template-columns: repeat(3 ,1fr);
     grid-template-rows: repeat(2, 1fr);
