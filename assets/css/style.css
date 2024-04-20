@@ -1,3 +1,5 @@
-body {
-    background: blue;
+/* remove white space */
+* {
+    margin: 0;
+    padding: 0;
 }
