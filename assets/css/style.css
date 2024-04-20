@@ -16,6 +16,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .score {
@@ -40,4 +41,8 @@ body {
     width: 220px;
     /* I wanted to give my holes some depth, I found a way online to do this using inset box-shadow */
     box-shadow: inset 0 15px 0 10px #402905;
+}
+
+.hole .mole {
+    width: 215px;
 }
