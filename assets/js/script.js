@@ -14,6 +14,7 @@ function runGame() {
     img.addEventListener('click', () => {
         score += 10
         score1.textContent = score
+        img.src = 'assets/images/smash-image.png'
     })
 
     hole.appendChild(img)
@@ -21,6 +22,6 @@ function runGame() {
     timer = setTimeout(() => {
         hole.removeChild(img)
         runGame()
-    }, 2000)
+    }, 1400)
 }
 runGame()
