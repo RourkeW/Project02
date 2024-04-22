@@ -1,17 +1,21 @@
-const holes = document.querySelectorAll('.hole')
-const mole = document.querySelector('.mole')
-const timeLeft = document.querySelector('#time-left')
-const score = document.querySelector('.score')
-
-let result = 0;
+const holes = [...document.querySelectorAll('.hole')]
+const score1 = document.querySelector('.score span')
+let score = 0
 
 function runGame() {
-    holes.forEach(holes => {
-        holes.classList.remove('.mole')
-    })
-    //I am using the Math random to choose any of my 6 holes, I also use floor to round down.
-    let randomHole = holes[Math.floor(Math.random() * 6)]
-    console.log(randomHole)
-}
+    const i = Math.floor(Math.random() * holes.length)
+    const hole = holes[i]
+    let timer = null
 
+    const img = document.createElement('img')
+    img.classList.add('mole')
+    img.src = 'assets/images/mole.png'
+
+    img.addEventListener('click', () => {
+        score += 10
+        score1.textContent = score
+    })
+
+    hole.appendChild(img)
+}
 runGame()
