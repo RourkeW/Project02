@@ -17,5 +17,10 @@ function runGame() {
     })
 
     hole.appendChild(img)
+
+    timer = setTimeout(() => {
+        hole.removeChild(img)
+        runGame()
+    }, 2000)
 }
 runGame()
