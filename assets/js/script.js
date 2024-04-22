@@ -15,6 +15,11 @@ function runGame() {
         score += 10
         score1.textContent = score
         img.src = 'assets/images/smash-image.png'
+        clearTimeout(time)
+        setTimeout(() => {
+            hole.removeChild(img)
+            runGame()
+        }, 500)
     })
 
     hole.appendChild(img)
