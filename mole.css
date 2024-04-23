@@ -1,0 +1,30 @@
+body {
+    font-family: 'Caveat Brush', sans-serif;
+    text-align: center;
+    background-color: #57B400;
+    color: #000EB4;
+}
+
+#board {
+    /* the height and width is 680px each because if we have 200*3 + 80 for the 40*2 gaps */
+    width: 680px;
+    height: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+#board div {
+    width: 200px; 
+    height: 200px;
+    background-color: #7c3f00;
+    border-radius: 50%;
+    box-shadow: inset 0 10px 0 7px #492201;
+}
+
+#board div img {
+    width: 80%;
+    height: 80%;
+}
