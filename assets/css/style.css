@@ -45,30 +45,7 @@ body {
     overflow: hidden;
 }
 
-.hole .mole {
-    width: 215px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    animation: rise 1s ease-out;
-}
-
-.hole .bomber {
-    width: 215px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    animation: rise 1s ease-out;
-}
-
-/* obtained knowledge on this from https://imagekit.io/blog/creating-css-image-effects/#:~:text=External%20JavaScript&text=You%20can%20create%20your%20own,to%20create%20really%20cool%20effects. */
-@keyframes rise {
-    0%{
-        transform: translateX(-50%) translateY(100%);
-    }
-    100% {
-        translate: translateX(-50%) translateY(0);
-    }
+#board div img {
+    width: 100px;
+    height: 100px;
 }
