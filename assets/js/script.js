@@ -1,32 +1,11 @@
-const holes = [...document.querySelectorAll('.hole')]
-const score1 = document.querySelector('.score span')
-let score = 0
+window.onload = function() {
+    runGame();
+}
 
 function runGame() {
-    const i = Math.floor(Math.random() * holes.length)
-    const hole = holes[i]
-    let timer = null
-
-    const img = document.createElement('img')
-    img.classList.add('mole')
-    img.src = 'assets/images/mole.png'
-
-    img.addEventListener('click', () => {
-        score += 10
-        score1.textContent = score
-        img.src = 'assets/images/smash-image.png'
-        clearTimeout(time)
-        setTimeout(() => {
-            hole.removeChild(img)
-            runGame()
-        }, 500)
-    })
-
-    hole.appendChild(img)
-
-    timer = setTimeout(() => {
-        hole.removeChild(img)
-        runGame()
-    }, 1400)
+    for (let i =0; i < 6; i++) {
+        let tile = document.createElement("div")
+        tile.id = i.toString();
+        document.getElementById("board").appendChild(tile);
+    }
 }
-runGame()

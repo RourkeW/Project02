@@ -8,6 +8,10 @@ html, body {
     height: 100%;
 }
 
+.logo {
+    margin: 0 auto;
+}
+
 body {
     font-family: 'Caveat Brush', sans-serif;
     background-color: #57B400;
@@ -24,16 +28,13 @@ body {
 }
 
 .game-area {
-    height: 650px;
+    height: 1000px;
     width: 1000px;
-    margin: 0px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 85px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.hole {
+#board div {
     background-color: #76552b;
     border-radius: 50%;
     height: 220px;
@@ -45,6 +46,15 @@ body {
 }
 
 .hole .mole {
+    width: 215px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    animation: rise 1s ease-out;
+}
+
+.hole .bomber {
     width: 215px;
     position: absolute;
     left: 50%;
