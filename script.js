@@ -4,7 +4,7 @@ let score = 0;
 let gameOver = false;
 
 window.onload = function() {
-    runGameGame();
+    runGame();
 }
 
 function runGame() {
@@ -14,8 +14,8 @@ function runGame() {
         tile.addEventListener("click", selectTile);
         document.getElementById("board").appendChild(tile);
     }
-    setInterval(setMole, 1000);
-    setInterval(setBomb, 2000);
+    setInterval(setMole, 800);
+    setInterval(setBomb, 1400);
 }
 
 function getRandomTile() {
@@ -65,10 +65,10 @@ function selectTile() {
     }
     if (this == currMoleTile) {
         score += 10;
-        document.getElementById("score").innerText = score.toString(); 
+        document.getElementById("score").innerText = score.toString();
     }
     else if (this == currBombTile) {
-        document.getElementById("score").innerText = "GAME OVER: " + score.toString(); 
+        document.getElementById("score").innerText = "GAME OVER: " + score.toString();
         gameOver = true;
     }
 }

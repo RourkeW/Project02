@@ -6,27 +6,21 @@ body {
 }
 
 #board {
-    /* the height and width is 680px each because if we have 200*3 + 80 for the 40*2 gaps */
     width: 680px;
     height: 680px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     gap: 40px;
-}
-
-.score-holder {
-    display: flex;
-    justify-content: center;
 }
 
 #board div {
     width: 200px; 
     height: 200px;
-    background-color: #7c3f00;
+    background-color: #76552b;
     border-radius: 50%;
-    box-shadow: inset 0 10px 0 7px #492201;
+    /*box-shadow idea from: https://www.youtube.com/watch?v=b20YueeXwZg&t=878s */
+    box-shadow: inset 0 10px 0 7px #402905;
 }
 
 #board div img {
