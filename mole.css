@@ -16,6 +16,11 @@ body {
     gap: 40px;
 }
 
+.score-holder {
+    display: flex;
+    justify-content: center;
+}
+
 #board div {
     width: 200px; 
     height: 200px;
